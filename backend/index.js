@@ -15,7 +15,8 @@ app.get('/', (req, res) => {
 if(process.env.NODE_ENV === "production"){
     app.use(express.static(clientRoot))
     app.get('/', (req, res) => {
-        res.sendFile("index.html", {clientRoot})
+        // res.sendFile("index.html", {clientRoot})
+        res.send({ hello: "jhgsvkhg"})
     })
 }
 
