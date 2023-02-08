@@ -10,7 +10,7 @@ app.get('/', (req, res) => {
     res.send({
         hello: "hello"
     })
-    app.use(express.static(clientRoot))
+    // app.use(express.static(clientRoot))
     // res.sendFile(clientRoot, "index.html")
 })
 
