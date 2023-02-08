@@ -1,12 +1,15 @@
 const express = require("express")
 
 const app = express()
+const path = require("path")
 const PORT = process.env.PORT || 9000
 // Rendered build folder from client
-const clientRoot = require("path").join(__dirname, "../client", "build")
+const clientRoot = path.join(__dirname, "../client", "build")
 
 app.get('/', (req, res) => {
-    res.send("HELLO")
+    // res.send("HELLO")
+    app.use(express.static(clientRoot))
+    res.sendFile(clientRoot, "index.html")
 })
 
 if(process.env.NODE_ENV === "production"){
