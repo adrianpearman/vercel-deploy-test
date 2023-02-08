@@ -7,9 +7,7 @@ const PORT = process.env.PORT || 9000
 const clientRoot = path.join(__dirname, "../client", "build")
 
 app.get('/', (req, res) => {
-    res.send({
-        hello: "hello"
-    })
+    res.send("Hello")
     // app.use(express.static(clientRoot))
     // res.sendFile(clientRoot, "index.html")
 })
